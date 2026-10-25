@@ -1,8 +1,8 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.makinglyai/docket-room",
   "title": "Docket Room",
-  "description": "Legislative intelligence for all 50 US states, DC and Congress: bills, hearings, votes, legislators and federal regulations from official sources.",
+  "description": "Bills, hearings, votes and legislators for all 50 US states, DC and Congress, from official sources.",
   "version": "1.0.0",
   "websiteUrl": "https://docketroom.ai",
   "repository": {
