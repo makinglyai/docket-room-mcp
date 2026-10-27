@@ -46,6 +46,8 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 - What changed in the latest version of CA SB 53?
 - Who sponsored HR 10768, and what else have they introduced on AI?
 - What's new on my tracked bills since I last asked?
+- Show me the full history of TX SB 1188 and flag the votes that mattered.
+- Is this sentence actually in the enrolled text of TX SB 1188? "…"
 - Only email me weekly about my tracked bills, and alert me 48 hours before their hearings.
 
 ## Plans
@@ -57,18 +59,20 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 | AI analysis, amendment diffs, multistate comparisons, hearing briefs | 3 a day | ✅ | ✅ |
 | Tracked bills | 5 | 100 | more |
 | Keyword alerts | 3 | unlimited | unlimited |
+| Bill history (`bill_timeline`) | latest 3 events | full | full |
+| Quote checks (`verify_quote`) | 5 a day | ✅ | ✅ |
 | Shared team records, notes, org-profile impact scoring, webhooks | — | — | ✅ |
 
 See [docketroom.ai/pricing](https://docketroom.ai/pricing).
 
 ## Tools
 
-49 tools and 3 prompts, grouped:
+51 tools and 3 prompts, grouped:
 
 | Group | Tools |
 |---|---|
 | Find bills | `search_bills`, `semantic_search_bills`, `list_bills`, `fast_movers`, `bill_momentum`, `related_bills` |
-| Read a bill | `get_bill`, `get_bill_text`, `get_bill_votes`, `get_bill_cosponsors`, `list_bill_versions`, `get_bill_changes` |
+| Read and verify a bill | `get_bill`, `get_bill_text`, `bill_timeline`, `verify_quote`, `get_bill_votes`, `get_bill_cosponsors`, `list_bill_versions`, `get_bill_changes` |
 | AI analysis | `analyze_bill`, `compare_bill_versions`, `compare_bills`, `hearing_brief`, `generate_report` |
 | People | `list_legislators`, `get_legislator`, `legislators_on_topic`, `bill_stakeholders` |
 | Hearings | `upcoming_hearings`, `get_hearing` |
