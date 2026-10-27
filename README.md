@@ -11,7 +11,7 @@ Docket Room gives Claude, ChatGPT, Cursor and other MCP clients live legislative
 - legislators
 - federal regulations
 
-Data is read nightly from official legislature sources, so answers come from the record, not a guess. Every result links back to [docketroom.ai](https://docketroom.ai) so you can share it.
+Data is read nightly from official legislature sources, so answers come from the record, not a guess. Docket Room also remembers what you track: `whats_new` tells your assistant what changed on your bills and keyword alerts since you last asked. Every result links back to [docketroom.ai](https://docketroom.ai) so you can share it.
 
 This is a hosted (remote) server. There's nothing to install or run locally.
 
@@ -45,6 +45,8 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 - Compare how states are regulating deepfakes in elections.
 - What changed in the latest version of CA SB 53?
 - Who sponsored HR 10768, and what else have they introduced on AI?
+- What's new on my tracked bills since I last asked?
+- Only email me weekly about my tracked bills, and alert me 48 hours before their hearings.
 
 ## Plans
 
@@ -54,6 +56,7 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 | Requests per hour | 60 | 1,000 | 5,000+ |
 | AI analysis, amendment diffs, multistate comparisons, hearing briefs | 3 a day | ✅ | ✅ |
 | Tracked bills | 5 | 100 | more |
+| Keyword alerts | 3 | unlimited | unlimited |
 | Shared team records, notes, org-profile impact scoring, webhooks | — | — | ✅ |
 
 See [docketroom.ai/pricing](https://docketroom.ai/pricing).
@@ -70,7 +73,7 @@ See [docketroom.ai/pricing](https://docketroom.ai/pricing).
 | People | `list_legislators`, `get_legislator`, `legislators_on_topic`, `bill_stakeholders` |
 | Hearings | `upcoming_hearings`, `get_hearing` |
 | Federal regulations | `search_regulations`, `get_regulation` |
-| Monitoring | `recent_changes`, `activity_summary`, `tracked_changes`, `track_bill`, `untrack_bill`, `update_tracked_bill`, `list_tracked_bills`, `list_keyword_alerts`, `create_keyword_alert`, `delete_keyword_alert`, `list_webhooks`, `create_webhook`, `delete_webhook` |
+| Monitoring | `whats_new`, `set_alerts`, `recent_changes`, `activity_summary`, `tracked_changes`, `track_bill`, `untrack_bill`, `update_tracked_bill`, `list_tracked_bills`, `list_keyword_alerts`, `create_keyword_alert`, `delete_keyword_alert`, `list_webhooks`, `create_webhook`, `delete_webhook` |
 | Team workspace | `get_organization_profile`, `set_organization_profile`, `assess_bill_impact`, `scan_relevant_bills`, `set_team_bill_record`, `add_team_bill_note`, `get_team_bill_record`, `list_team_bill_records`, `set_bill_relevance` |
 | Prompts | `bill`, `bill_brief`, `topic_scan` |
 
