@@ -22,7 +22,9 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 | **Endpoint** | `https://docketroom.ai/api/mcp` (Streamable HTTP) |
 | **Auth** | OAuth 2.1 with PKCE and dynamic client registration. You sign in to a free Docket Room account during setup |
 
-**Claude** (web or desktop): Settings → Connectors → *Add custom connector* → paste the endpoint → sign in.
+**Claude** (web or desktop): [Customize → Connectors](https://claude.ai/customize/connectors) → **+ Add** → *Add custom connector* → paste the endpoint → sign in.
+
+**Claude Code**: `claude mcp add --transport http docket-room https://docketroom.ai/api/mcp`, then `/mcp` to sign in.
 
 **ChatGPT**: add a custom connector (in developer mode) with the endpoint above, then sign in.
 
@@ -35,7 +37,11 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 }
 ```
 
+**VS Code**: run *MCP: Add Server*, choose HTTP, and paste the endpoint.
+
 **Any MCP client** that supports remote servers with OAuth: use the endpoint above.
+
+Step-by-step setup, with one-click install for Cursor and VS Code: [docketroom.ai/connect](https://docketroom.ai/connect).
 
 ## Try asking
 
