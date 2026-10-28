@@ -2,16 +2,17 @@
 
 # Docket Room MCP server
 
-**Legislative intelligence for all 50 US states, DC and Congress, inside your AI assistant.**
+**Your assistant can read any bill. Docket Room tells it what changed.**
 
-Docket Room gives Claude, ChatGPT, Cursor and other MCP clients live legislative data:
-- bill status, full text, sponsors and actions
-- roll-call votes
-- hearings
-- legislators
-- federal regulations
+Docket Room gives Claude, ChatGPT, Cursor and other MCP clients the legislative record for all 50 states, DC and Congress. That covers bills, full text, votes, hearings, legislators and federal regulations, read nightly from official sources. Reading is free.
 
-Data is read nightly from official legislature sources, so answers come from the record, not a guess. Docket Room also remembers what you track: `whats_new` tells your assistant what changed on your bills and keyword alerts since you last asked. Every result links back to [docketroom.ai](https://docketroom.ai) so you can share it.
+What an assistant can't do on its own is remember. Docket Room can:
+- **`whats_new`**: what changed on your bills and keyword alerts since you last asked
+- **`bill_timeline`**: a bill's full dated history, with the votes that mattered flagged
+- **`verify_quote`**: whether the exact language is in the enrolled text, and in which section
+- **Team memory**: your team's positions and notes, in every teammate's assistant
+
+Every result links back to [docketroom.ai](https://docketroom.ai) so you can share it.
 
 This is a hosted (remote) server. There's nothing to install or run locally.
 
@@ -56,7 +57,7 @@ Step-by-step setup, with one-click install for Cursor and VS Code: [docketroom.a
 - Is this sentence actually in the enrolled text of TX SB 1188? "…"
 - Only email me weekly about my tracked bills, and alert me 48 hours before their hearings.
 
-## Plans
+## Plans: free to read, paid to keep watch
 
 | | Free | Pro | Team |
 |---|---|---|---|
