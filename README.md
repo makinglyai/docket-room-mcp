@@ -2,6 +2,8 @@
 
 # Docket Room MCP server
 
+[![Docket Room MCP connector](https://glama.ai/mcp/connectors/io.github.makinglyai/docket-room/badges/score.svg)](https://glama.ai/mcp/connectors/io.github.makinglyai/docket-room)
+
 **Your assistant can read any bill. Docket Room tells it what changed.**
 
 Docket Room gives Claude, ChatGPT, Cursor and other MCP clients the legislative record for all 50 states, DC and Congress. That covers bills, full text, votes, hearings, legislators and federal regulations, read nightly from official sources. Reading is free.
