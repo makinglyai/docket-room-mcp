@@ -27,9 +27,14 @@ jobs:
       - name: Publish
         run: ./mcp-publisher publish
       - name: Confirm the registry serves this version
+        # The registry takes a few seconds to mark a new version as latest.
         run: |
           want=$(jq -r .version server.json)
-          got=$(curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.makinglyai/docket-room" \
-            | jq -r '.servers[] | select(._meta["io.modelcontextprotocol.registry/official"].isLatest) | .server.version')
-          echo "want=$want got=$got"
-          test "$want" = "$got"
+          for i in 1 2 3 4 5 6; do
+            got=$(curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.makinglyai/docket-room&version=latest" \
+              | jq -r '.servers[0].server.version')
+            echo "want=$want got=$got"
+            [ "$want" = "$got" ] && exit 0
+            sleep 10
+          done
+          exit 1
