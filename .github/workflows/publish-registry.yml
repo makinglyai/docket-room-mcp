@@ -1,0 +1,35 @@
+name: Publish to the MCP Registry
+
+# Publishes server.json to registry.modelcontextprotocol.io whenever it changes
+# on main. Signs in with GitHub's OIDC token, so there is no secret to store and
+# no device code to approve. The registry rejects a version it already has, so
+# bump "version" in server.json with every change.
+on:
+  push:
+    branches: [main]
+    paths: [server.json]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mcp-publisher
+        run: |
+          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/download/v1.8.16/mcp-publisher_linux_amd64.tar.gz" | tar xz mcp-publisher
+      - name: Sign in with GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+      - name: Publish
+        run: ./mcp-publisher publish
+      - name: Confirm the registry serves this version
+        run: |
+          want=$(jq -r .version server.json)
+          got=$(curl -fsS "https://registry.modelcontextprotocol.io/v0/servers?search=io.github.makinglyai/docket-room" \
+            | jq -r '.servers[] | select(._meta["io.modelcontextprotocol.registry/official"].isLatest) | .server.version')
+          echo "want=$want got=$got"
+          test "$want" = "$got"

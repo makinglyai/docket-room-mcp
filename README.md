@@ -24,6 +24,7 @@ This is a hosted (remote) server. There's nothing to install or run locally.
 |---|---|
 | **Endpoint** | `https://docketroom.ai/api/mcp` (Streamable HTTP) |
 | **Auth** | OAuth 2.1 with PKCE and dynamic client registration. You sign in to a free Docket Room account during setup |
+| **No sign-in** | `https://docketroom.ai/api/mcp/public` reads bills, text, votes, hearings, legislators and regulations without an account. Tracking, alerts, `whats_new` and AI analysis need the endpoint above |
 
 **Claude** (web or desktop): [Customize → Connectors](https://claude.ai/customize/connectors) → **+ Add** → *Add custom connector* → paste the endpoint → sign in.
 
